@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Account - Library System</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-lib px-3">
+  <span class="navbar-brand mb-0 h1">Library System</span>
+  <a href="login.html" class="btn btn-gold btn-sm">Log out</a>
+</nav>
+<div class="container py-4" style="max-width:720px">
+  <h2 class="mb-3">My account</h2>
+  <div class="row g-3 mb-4">
+    <div class="col-6"><div class="card card-lib p-3"><small>Borrowed books</small><h2 class="mb-0">2</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Fines</small><h2 class="mb-0">0.00</h2></div></div>
+  </div>
+  <h3 class="h5 mb-2">Due dates</h3>
+  <div class="card card-lib mb-4">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between"><div><strong>Clean Code</strong><br><small>Borrowed Oct 10</small></div><span class="badge bg-success align-self-center">Due Oct 24</span></li>
+      <li class="list-group-item d-flex justify-content-between"><div><strong>1984</strong><br><small>Borrowed Oct 17</small></div><span class="badge bg-warning text-dark align-self-center">Due Oct 31</span></li>
+    </ul>
+  </div>
+  <a href="books.html" class="btn btn-lib w-100">Browse books</a>
+</div>
+</body>
+</html>
