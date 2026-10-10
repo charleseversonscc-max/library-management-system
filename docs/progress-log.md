@@ -7,3 +7,4 @@
 - ER diagram and use case diagram done
 - Wrote requirements list and added sample data
 - Installed Tomcat 9 and ran Hello World servlet
+- Built login page and book list page (green and cream library theme)
