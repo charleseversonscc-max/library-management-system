@@ -6,3 +6,4 @@
 - Created GitHub repo and pushed first commit
 - ER diagram and use case diagram done
 - Wrote requirements list and added sample data
+- Installed Tomcat 9 and ran Hello World servlet
