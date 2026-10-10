@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books - Library System</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-lib px-3">
+  <span class="navbar-brand mb-0 h1">Library System</span>
+  <a href="login.html" class="btn btn-gold btn-sm">Log out</a>
+</nav>
+<div class="container py-4" style="max-width:720px">
+  <h2 class="mb-3">Books</h2>
+  <input type="text" id="search" class="form-control mb-3" placeholder="Search title, author or ISBN">
+  <div class="card card-lib">
+    <ul class="list-group list-group-flush" id="bookList">
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>Clean Code</strong><br><small>Robert Martin &middot; 9780132350884</small></div><span class="badge bg-success">3 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>Head First Java</strong><br><small>Kathy Sierra &middot; 9780596009205</small></div><span class="badge bg-success">2 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>Pride and Prejudice</strong><br><small>Jane Austen &middot; 9780141439518</small></div><span class="badge bg-success">2 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>Effective Java</strong><br><small>Joshua Bloch &middot; 9780134685991</small></div><span class="badge bg-success">2 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>Design Patterns</strong><br><small>Erich Gamma &middot; 9780201633610</small></div><span class="badge bg-success">2 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>The Pragmatic Programmer</strong><br><small>David Thomas &middot; 9780135957059</small></div><span class="badge bg-success">2 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>Introduction to Algorithms</strong><br><small>Thomas Cormen &middot; 9780262046305</small></div><span class="badge bg-warning text-dark">1 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>1984</strong><br><small>George Orwell &middot; 9780451524935</small></div><span class="badge bg-success">3 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>To Kill a Mockingbird</strong><br><small>Harper Lee &middot; 9780061120084</small></div><span class="badge bg-success">2 left</span></li>
+<li class="list-group-item d-flex justify-content-between align-items-center"><div><strong>The Great Gatsby</strong><br><small>F. Scott Fitzgerald &middot; 9780743273565</small></div><span class="badge bg-success">2 left</span></li>
+    </ul>
+  </div>
+</div>
+<script>
+document.getElementById('search').addEventListener('input', function () {
+  var q = this.value.toLowerCase();
+  document.querySelectorAll('#bookList li').forEach(function (li) {
+    li.style.display = li.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
