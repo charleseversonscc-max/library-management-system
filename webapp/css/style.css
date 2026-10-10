@@ -1,0 +1,10 @@
+:root{--green:#1F4D3A;--cream:#F7F3EA;--gold:#C8963E;--text:#2B2B2B}
+body{background:var(--cream);color:var(--text);font-family:'Inter',sans-serif}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--green)}
+.navbar-lib{background:var(--green)}
+.navbar-lib .navbar-brand{color:#fff;font-family:'Playfair Display',serif}
+.btn-lib{background:var(--green);color:#fff;border:0;border-radius:8px}
+.btn-lib:hover{background:#17392b;color:#fff}
+.btn-gold{background:var(--gold);color:#fff;border:0;border-radius:8px}
+.card-lib{background:#fff;border:0;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+a{color:var(--green)}
