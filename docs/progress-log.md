@@ -9,3 +9,4 @@
 - Installed Tomcat 9 and ran Hello World servlet
 - Built login page and book list page (green and cream library theme)
 - Built member dashboard page
+- Built admin panel page
