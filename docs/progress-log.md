@@ -1,8 +1,12 @@
 # Progress log
 
-## Week 1 (Oct 10 to Oct 16, 2026)
-- Set up Java 17, Git, MariaDB and GitHub
-- Built library_db with 5 tables and sample data
-- Wrote requirements, ER diagram and use case diagram
-- Switched to a console Java project (no GUI) as required by the professor
-- Added DBConnection, Book class, BookDAO and a list/search menu
+## 2026-10-10 (Week 1)
+- Set up Java 17, MariaDB and Git
+- Created folders and database schema (5 tables)
+- Created GitHub repo and pushed first commit
+- ER diagram and use case diagram done
+- Wrote requirements list and added sample data
+- Installed Tomcat 9 and ran Hello World servlet
+- Built login page and book list page (green and cream library theme)
+- Built member dashboard page
+- Built admin panel page
