@@ -14,7 +14,8 @@
 <div class="container py-5" style="max-width:420px">
   <div class="card card-lib p-4">
     <h2 class="text-center mb-4">Welcome back</h2>
-    <form action="login" method="post">
+    <div id="err" class="alert alert-danger d-none">Wrong username or password.</div>
+    <form action="../login" method="post">
       <div class="mb-3">
         <label class="form-label">Username</label>
         <input type="text" name="username" class="form-control" required>
@@ -27,5 +28,6 @@
     </form>
   </div>
 </div>
+<script>if(location.search.indexOf("error")>-1)document.getElementById("err").classList.remove("d-none");</script>
 </body>
 </html>
