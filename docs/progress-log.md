@@ -12,3 +12,4 @@
 - Built admin panel page
 - Connected the book list to the database (BookServlet, books.jsp)
 - Built login, logout, and role-based page protection (User, Admin, Member classes, hashed passwords)
+- Built admin book management (add, edit, delete) with validation and duplicate ISBN check

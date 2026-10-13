@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import library.model.User;
 
-@WebFilter(urlPatterns = {"/pages/*", "/books"})
+@WebFilter(urlPatterns = {"/pages/*", "/books", "/admin/*"})
 public class AuthFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
@@ -29,7 +29,8 @@ public class AuthFilter implements Filter {
             res.sendRedirect(req.getContextPath() + "/pages/login.html");
             return;
         }
-        if (path.equals("/pages/admin.html") && !"ADMIN".equals(user.getRole())) {
+        boolean adminArea = path.startsWith("/admin/") || path.equals("/pages/admin.html");
+        if (adminArea && !"ADMIN".equals(user.getRole())) {
             res.sendError(HttpServletResponse.SC_FORBIDDEN, "Admins only");
             return;
         }

@@ -30,7 +30,7 @@ if (books.isEmpty()) { %>
 for (Book b : books) {
   int n = b.getCopiesAvailable();
   String badge = n == 0 ? "bg-danger" : (n == 1 ? "bg-warning text-dark" : "bg-success"); %>
-      <li class="list-group-item d-flex justify-content-between align-items-center"><div><strong><%= b.getTitle() %></strong><br><small><%= b.getAuthor() %> &middot; <%= b.getIsbn() %></small></div><span class="badge <%= badge %>"><%= n %> left</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center"><div><strong><%= library.util.Html.esc(b.getTitle()) %></strong><br><small><%= library.util.Html.esc(b.getAuthor()) %> &middot; <%= library.util.Html.esc(b.getIsbn()) %></small></div><span class="badge <%= badge %>"><%= n %> left</span></li>
 <% } %>
     </ul>
   </div>
