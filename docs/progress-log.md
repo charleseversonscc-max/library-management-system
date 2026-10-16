@@ -17,3 +17,4 @@
 - Built issue and return with 14-day due date, 3-book limit, and late fines (5.00 per day)
 - Saved ER diagram, use case diagram, and wireframes in docs/diagrams
 - Built the shared navbar and footer (one menu for every page, different links for admin and member)
+- Built member dashboard with real loans, overdue badges, and unpaid fines
