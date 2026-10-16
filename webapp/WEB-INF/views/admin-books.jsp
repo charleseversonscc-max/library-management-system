@@ -14,10 +14,7 @@
 <link href="<%= ctx %>/css/style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-lib px-3">
-  <span class="navbar-brand mb-0 h1">Library System</span>
-  <a href="<%= ctx %>/pages/admin.html" class="btn btn-gold btn-sm">Back</a>
-</nav>
+<div id="app-nav"></div>
 <div class="container py-4" style="max-width:720px">
   <h2 class="mb-3">Manage books</h2>
   <% if (msg != null) { %><div class="alert <%= ok ? "alert-success" : "alert-danger" %>"><%= msg %></div><% } %>
@@ -45,5 +42,7 @@
     </ul>
   </div>
 </div>
+<div id="app-footer"></div>
+<script src="<%= ctx %>/js/layout.js"></script>
 </body>
 </html>

@@ -11,10 +11,7 @@
 <link href="<%= ctx %>/css/style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-lib px-3">
-  <span class="navbar-brand mb-0 h1">Library System</span>
-  <a href="<%= ctx %>/logout" class="btn btn-gold btn-sm">Log out</a>
-</nav>
+<div id="app-nav"></div>
 <div class="container py-4" style="max-width:720px">
   <h2 class="mb-3">Books</h2>
   <form action="<%= ctx %>/books" method="get" class="mb-3">
@@ -35,5 +32,7 @@ for (Book b : books) {
     </ul>
   </div>
 </div>
+<div id="app-footer"></div>
+<script src="<%= ctx %>/js/layout.js"></script>
 </body>
 </html>
