@@ -25,7 +25,7 @@
     btn.type = 'button';
     var menu = el('div', 'w-100 d-none pt-2 pb-1');
     var items = user.role === 'ADMIN'
-      ? [['Admin panel', '/pages/admin.html'], ['Books', '/books'], ['Manage books', '/admin/books'], ['Members', '/admin/members'], ['Issue and return', '/admin/loans']]
+      ? [['Admin panel', '/pages/admin.html'], ['Books', '/books'], ['Manage books', '/admin/books'], ['Members', '/admin/members'], ['Issue and return', '/admin/loans'], ['Reports', '/admin/reports']]
       : [['My account', '/member/dashboard'], ['Books', '/books'], ['My profile', '/member/profile']];
     items.forEach(function (it) {
       var a = link(base + it[1], it[0], 'd-block py-1');

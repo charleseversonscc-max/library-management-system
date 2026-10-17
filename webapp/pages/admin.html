@@ -12,17 +12,34 @@
 <div class="container py-4" style="max-width:720px">
   <h2 class="mb-3">Admin panel</h2>
   <div class="row g-3 mb-4">
-    <div class="col-6"><div class="card card-lib p-3"><small>Books</small><h2 class="mb-0">10</h2></div></div>
-    <div class="col-6"><div class="card card-lib p-3"><small>Members</small><h2 class="mb-0">2</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Book titles</small><h2 class="mb-0" id="s-titles">-</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Members</small><h2 class="mb-0" id="s-members">-</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Borrowed now</small><h2 class="mb-0" id="s-borrowed">-</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Overdue</small><h2 class="mb-0" id="s-overdue">-</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Copies available</small><h2 class="mb-0" id="s-copies">-</h2></div></div>
+    <div class="col-6"><div class="card card-lib p-3"><small>Unpaid fines</small><h2 class="mb-0" id="s-fines">-</h2></div></div>
   </div>
   <div class="d-grid gap-2">
     <a href="../admin/books" class="btn btn-lib">Manage books</a>
     <a href="../admin/members" class="btn btn-lib">Manage members</a>
     <a href="../admin/loans" class="btn btn-lib">Issue and return</a>
-    <a href="#" class="btn btn-lib">Reports</a>
+    <a href="../admin/reports" class="btn btn-lib">Reports</a>
   </div>
 </div>
 <div id="app-footer"></div>
 <script src="../js/layout.js"></script>
+<script>
+fetch('../admin/stats', { credentials: 'same-origin', cache: 'no-store' })
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .then(function (s) {
+    if (!s) return;
+    document.getElementById('s-titles').textContent = s.titles;
+    document.getElementById('s-members').textContent = s.members;
+    document.getElementById('s-borrowed').textContent = s.borrowed;
+    document.getElementById('s-overdue').textContent = s.overdue;
+    document.getElementById('s-copies').textContent = s.copies;
+    document.getElementById('s-fines').textContent = s.fines;
+  });
+</script>
 </body>
 </html>
