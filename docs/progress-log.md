@@ -20,3 +20,4 @@
 - Built member dashboard with real loans, overdue badges, and unpaid fines
 - Built member profile (edit details and change password with the current password check)
 - Built admin live counts, reports (overdue and most borrowed books), and ran edge-case tests
+- Added class diagram, user manual, test cases, and demo script; ran the final check
