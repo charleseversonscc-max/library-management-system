@@ -10,6 +10,11 @@ public class DBConnection {
     private static final String PASS = "library123";
 
     public static Connection getConnection() throws SQLException {
+        try {
+            Class.forName("org.mariadb.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("MariaDB driver not found", e);
+        }
         return DriverManager.getConnection(URL, USER, PASS);
     }
 }
